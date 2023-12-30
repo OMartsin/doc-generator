@@ -174,7 +174,7 @@ function getCurrencyRateToShow() {
                 </div>
                 <div class="vuetify-element-container">
                     <v-text-field v-model="invoiceInfo.customer.edrpou" hide-details label="ЄДРПОУ" variant="outlined"
-                        required/>
+                        required />
                 </div>
             </section>
 
@@ -192,8 +192,8 @@ function getCurrencyRateToShow() {
                 </div>
 
                 <div class="vuetify-element-container">
-                    <v-text-field v-model="tempPrice" hide-details label="Сума з ПДВ" variant="outlined"
-                        type="number" min="0" />
+                    <v-text-field v-model="tempPrice" hide-details label="Сума з ПДВ" variant="outlined" type="number"
+                        min="0" />
                 </div>
                 <div class="vuetify-element-container">
                     <v-text-field v-model="vatPercentages" suffix="%" hide-details label="ПДВ" variant="outlined"
@@ -225,8 +225,8 @@ function getCurrencyRateToShow() {
                         required hide-details></v-combobox>
                 </div>
                 <div class="vuetify-element-container">
-                    <v-combobox v-model="invoiceInfo.trip.description" hide-details label="Опис" :items="standardDescription"
-                        variant="outlined" required></v-combobox>
+                    <v-combobox v-model="invoiceInfo.trip.description" hide-details label="Опис"
+                        :items="standardDescription" variant="outlined" required></v-combobox>
                 </div>
             </section>
 
@@ -236,7 +236,7 @@ function getCurrencyRateToShow() {
                     :format="format" auto-apply required />
             </section>
 
-            <button type="submit" class="submit-button">Submit</button>
+            <v-btn class="text-none text-subtitle-1" color="#4caf50" block variant="flat" type="submit">Submit</v-btn>
         </div>
     </form>
 </template>
@@ -326,18 +326,4 @@ textarea {
     font-weight: 500;
 }
 
-.submit-button {
-    padding: 0.85rem;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-    background-color: #43a047;
-}
 </style>
