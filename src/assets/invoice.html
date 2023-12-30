@@ -5,10 +5,10 @@
   <meta name="Generator" content="Microsoft Word 15 (filtered)" />
   <title>Invoice/Інвойс №</title>
   <style>
-    <!--
+      
     body {
       margin-top: 0px;
-      margin-bottom: 0px;
+      margin-bottom: 0px !important;
       margin-right: 0px;
       margin-left: 0px;
     }
@@ -68,6 +68,7 @@
       margin: 0in;
       font-size: 12.0pt;
       font-family: "Times New Roman", serif;
+      margin-bottom: 0;
     }
 
     p.requisites-settingsrow-item-title,
@@ -76,6 +77,7 @@
       mso-style-name: requisites-settings__row-item-title;
       margin-right: 0in;
       margin-left: 0in;
+      margin-bottom: 0;
       font-size: 12.0pt;
       font-family: "Times New Roman", serif;
     }
@@ -87,7 +89,6 @@
     div.WordSection1 {
       page: WordSection1;
     }
-    -->
   </style>
 </head>
 
@@ -199,7 +200,7 @@
             <b><span lang="UK" style="font-family: 'Arial Narrow', sans-serif; color: black; background: white">Ціна
                 (загальна вартість) товарів/послуг</span></b><span lang="UK"
               style="font-family: 'Arial Narrow', sans-serif; color: black; background: white">: </span><span lang="RU"
-              style="font-family: 'Arial Narrow', sans-serif; color: black; background: white">{trip_price}</span>
+              style="font-family: 'Arial Narrow', sans-serif; color: black; background: white"> {trip_price}</span>
           </p>
         </td>
       </tr>
@@ -256,7 +257,7 @@
     </p>
 
     <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
-      style="margin-left: -15.9pt; border-collapse: collapse">
+      style="border-collapse: collapse">
       <tr>
         <td width="50" valign="top" style="
               width: 37.55pt;
@@ -295,12 +296,12 @@
               padding: 0in 5.4pt 0in 5.4pt;
             ">
           <p class="MsoNormal">
-            <span lang="UK" style="font-family: 'Arial Narrow', sans-serif">Ціна без ПДВ, грн</span>
+            <span lang="UK" style="font-family: 'Arial Narrow', sans-serif">Ціна без ПДВ, {currency}</span>
           </p>
         </td>
         <td width="142" valign="top" style="width: 106.35pt; border: solid black 1pt; padding: 0in 5.4pt 0in 5.4pt">
           <p class="MsoNormal">
-            <span lang="UK" style="font-family: 'Arial Narrow', sans-serif">Загальна вартість без ПДВ,грн</span>
+            <span lang="UK" style="font-family: 'Arial Narrow', sans-serif">Загальна вартість без ПДВ,{currency}</span>
           </p>
         </td>
       </tr>
