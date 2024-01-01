@@ -2,7 +2,7 @@ import htmlContent from '@/resources/invoice-uk.html?raw';
 import htmlENEURContent from '@/resources/invoice-en-eur.html?raw';
 import htmlENUSDContent from '@/resources/invoice-en-usd.html?raw';
 import htmlActContent from '@/resources/act.html?raw';
-import * as htmlToDocx from 'html-docx-js/dist/html-docx';
+import htmlToDocx from 'html-docx-js/dist/html-docx';
 import writtenNumber from 'written-number';
 import type { InvoiceInfo } from '../types/types';
 
