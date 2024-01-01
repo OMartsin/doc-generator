@@ -1,15 +1,17 @@
 export type AccountInfo = {
-    // name: string;
-    // edrpou: string;
-    // bank: string;
-    // mfo: string;
+    bank: string;
+    mfo: string;
     account: string;
 }
 
 export type CustomerInfo = {
     type: string;
     name: string;
+    directorName: string;
     edrpou: string;
+    ipn?: string;
+    address: string;
+    account: AccountInfo;
 }
 
 export type TripInfo = {

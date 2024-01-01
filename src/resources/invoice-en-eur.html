@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+	<title>Invoice/Інвойс №</title>
+	<style>
+		body {
+			font-family: 'Times New Roman';
+			font-size: 12pt
+		}
+
+		p {
+			margin: 0pt
+		}
+
+		table {
+			margin-top: 0pt;
+			margin-bottom: 0pt
+		}
+
+		.BalloonText {
+			font-family: 'Segoe UI';
+			font-size: 9pt
+		}
+
+		.BodyText {
+			widows: 0;
+			orphans: 0;
+			font-family: 'Book Antiqua';
+			font-size: 12pt;
+			font-weight: bold
+		}
+
+		.BodyTextIndent {
+			margin: 0pt 0pt 6pt 14.15pt;
+			text-indent: 0pt;
+			font-family: 'Times New Roman';
+			font-size: 12pt
+		}
+
+		.Caption {
+			margin-top: 6pt;
+			margin-bottom: 6pt;
+			font-size: 12pt;
+			font-style: italic
+		}
+
+		.Heading {
+			margin-top: 12pt;
+			margin-bottom: 6pt;
+			page-break-after: avoid;
+			font-family: 'Liberation Sans';
+			font-size: 14pt
+		}
+
+		.Index {
+			font-size: 12pt
+		}
+
+		.List {
+			widows: 0;
+			orphans: 0;
+			font-family: 'Times New Roman';
+			font-size: 12pt;
+			font-weight: bold
+		}
+
+		.NormalWeb {
+			margin-top: 5pt;
+			margin-bottom: 5pt;
+			font-size: 12pt
+		}
+
+		.TableContents {
+			font-size: 12pt
+		}
+
+		.TableHeading {
+			text-align: center;
+			font-size: 12pt;
+			font-weight: bold
+		}
+
+		.a {
+			margin-top: 12pt;
+			margin-bottom: 6pt;
+			page-break-after: avoid;
+			font-family: Arial;
+			font-size: 14pt
+		}
+
+		.a1 {
+			text-align: center;
+			font-family: 'Times New Roman';
+			font-size: 12pt;
+			font-weight: bold
+		}
+
+		.\31 {
+			margin-top: 6pt;
+			margin-bottom: 6pt;
+			font-family: 'Times New Roman';
+			font-size: 12pt;
+			font-style: italic
+		}
+
+		.a0 {
+			font-family: 'Times New Roman';
+			font-size: 12pt
+		}
+
+		.\31 0 {
+			font-family: 'Times New Roman';
+			font-size: 12pt
+		}
+
+		span.Absatz-Standardschriftart {
+			font-family: 'Times New Roman'
+		}
+
+		span.BalloonTextChar {
+			font-family: 'Segoe UI';
+			font-size: 9pt
+		}
+
+		span.DefaultParagraphFont1 {
+			font-family: 'Times New Roman'
+		}
+
+		span.WW-DefaultParagraphFont {
+			font-family: 'Times New Roman'
+		}
+
+		span.hps {
+			font-family: 'Times New Roman'
+		}
+	</style>
+</head>
+
+<body>
+	<p style="font-size:10pt">
+		<strong><span style="font-family:'Arial Narrow'; ">&#xa0;</span></strong>
+	</p>
+	<p style="text-align:center; font-size:10pt">
+		<strong><span style="font-family:'Arial Narrow'; ">Invoice (offer) / Інвойс
+				(оферта)</span></strong><strong><span style="font-family:'Arial Narrow'; ">&#xa0; </span></strong><span
+			style="font-family:'Arial Narrow'">№ </span><em><span
+				style="font-family:'Arial Narrow'; background-color:#ffffff">11/2022</span></em>
+	</p>
+	<table
+		style="width:486.65pt; margin-right:9pt; border:0.75pt solid #000000; border-collapse:collapse; float:left">
+		<tr>
+			<td
+				style="width:225.85pt; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">Date</span></strong><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">: {invoice_date}</span>
+				</p>
+			</td>
+			<td
+				style="width:238.45pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">Дата</span></strong><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">: {invoice_date}</span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td
+				style="width:225.85pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; ">Supplier</span></strong><span
+						style="font-family:'Arial Narrow'"> Individual Entrepreneur Martsin Vasyl Bogdanovych</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">address: 77662, Pereginske, St. Lesi Ukrainky, 8</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Registration number - 2563912614</span>
+				</p>
+			</td>
+			<td
+				style="width:238.45pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; ">Виконавець</span></strong><span
+						style="font-family:'Arial Narrow'">:</span><span style="font-family:'Arial Narrow'">&#xa0;
+					</span><span style="font-family:'Arial Narrow'">ФОП Марцін Василь Богданович, що проживає за адресою
+						77662, смт. Перегінське, вул. Лесі Українки, 8, </span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">ЄДРПОУ - 2563912614</span>
+				</p>
+			</td>
+		</tr>
+		<tr style="height:30.65pt">
+			<td
+				style="width:225.85pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p class="BodyTextIndent" style="margin-left:0pt; margin-bottom:0pt; font-size:10pt">
+					<strong><span
+							style="font-family:'Arial Narrow'; background-color:#ffffff">Customer</span></strong><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">: {customer_name} </span>
+				</p>
+				<p class="BodyTextIndent" style="margin-left:0pt; margin-bottom:0pt; font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff"> {customer_address} </span>
+				</p>
+			</td>
+			<td
+				style="width:238.45pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p class="BodyTextIndent" style="margin-left:0pt; margin-bottom:0pt; font-size:10pt">
+					<strong><span
+							style="font-family:'Arial Narrow'; background-color:#ffffff">Замовник</span></strong><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">: {customer_name} </span>
+				</p>
+				<p class="BodyTextIndent" style="margin-left:0pt; margin-bottom:0pt; font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff"> {customer_address}</span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td
+				style="width:225.85pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top; background-color:#ffffff">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">Subject matter:
+						</span></strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">
+						{travel_description_en} </span>
+				</p>
+			</td>
+			<td
+				style="width:238.45pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; background-color:#ffffff">
+				<p style="font-size:10pt">
+					<strong><span
+							style="font-family:'Arial Narrow'; background-color:#ffffff">Предмет:</span></strong><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff"> {travel_description} </span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td
+				style="width:225.85pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; ">Currency</span></strong><span
+						style="font-family:'Arial Narrow'">: {currency} </span>
+				</p>
+			</td>
+			<td
+				style="width:238.45pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; ">Валюта</span></strong><span
+						style="font-family:'Arial Narrow'">: {currency} </span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td
+				style="width:225.85pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">Price
+							(a</span></strong><strong><span
+							style="font-family:'Arial Narrow'; ">mount</span></strong><strong><span
+							style="font-family:'Arial Narrow'; background-color:#ffffff">) of the goods/services
+						</span></strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">:
+						{trip_price}</span>
+				</p>
+			</td>
+			<td
+				style="width:238.45pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">Ціна (загальна вартість)
+							товарів/послуг</span></strong><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">: {trip_price}</span>
+				</p>
+			</td>
+		</tr>
+		<tr style="height:11.6pt">
+			<td
+				style="width:225.85pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">Terms of payments and
+							acceptation:</span></strong>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">Postpayment of 100% upon the
+						services delivery. </span>
+				</p>
+			</td>
+			<td
+				style="width:238.45pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">Умови оплати та передачі:
+						</span></strong><span style="font-family:'Arial Narrow'; background-color:#ffffff">100%
+						післяплата за фактом виконання послуг. </span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"
+				style="width:475.1pt; border-top:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<strong><span style="font-family:'Arial Narrow'; ">Supplier</span></strong><span
+						style="font-family:'Arial Narrow'"> </span><strong><span
+							style="font-family:'Arial Narrow'; ">Bank information</span></strong><span
+						style="font-family:'Arial Narrow'">:</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Beneficiary:</span><span
+						style="font-family:'Arial Narrow'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;
+					</span><span style="font-family:'Arial Narrow'">IE</span><span
+						style="font-family:'Arial Narrow'">&#xa0; </span><span
+						style="font-family:'Arial Narrow'">Martsin Vasyl Bogdanovych</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Account # :</span><span
+						style="font-family:'Arial Narrow'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;
+					</span><strong><u><span style="font-family:'Arial Narrow'; "> {account}</span></u></strong>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Beneficiary’s bank: JSC CB "PRIVATBANK"</span>
+				</p>
+				<p style="text-align:center; font-size:10pt">
+					<span style="font-family:'Arial Narrow'">1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">SWIFT code:</span><span
+						style="font-family:'Arial Narrow'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;
+					</span><span style="font-family:'Arial Narrow'">PBANUA2X</span>
+				</p>
+				<p style="font-size:10pt">
+					<strong><u><span style="font-family:'Arial Narrow'; ">Correspondent bank #1:</span></u></strong>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Commerzbank AG </span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Frankfurt am Main, Germany</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Account No.: 400886700401 </span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">SWIFT code: COBADEFF</span>
+				</p>
+			</td>
+		</tr>
+	</table>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">&#xa0;</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">&#xa0;</span>
+	</p>
+	<table style="border:0.75pt solid #000000; border-collapse:collapse">
+		<tr>
+			<td
+				style="width:12.6pt; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">№</span>
+				</p>
+			</td>
+			<td
+				style="width:157.2pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Description/</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Опис</span>
+				</p>
+			</td>
+			<td
+				style="width:84.9pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Quantity/</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Кількість</span>
+				</p>
+			</td>
+			<td
+				style="width:103.5pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Price, {currency}</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Ціна, {currency}</span>
+				</p>
+			</td>
+			<td
+				style="width:73.7pt; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Amount, {currency}/</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">Загальна вартість,</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">{currency}</span>
+				</p>
+			</td>
+		</tr>
+		<tr style="height:19.85pt">
+			<td
+				style="width:12.6pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">1</span>
+				</p>
+			</td>
+			<td
+				style="width:157.2pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p>
+					<span style="font-family:'Arial Narrow'; font-size:10pt; background-color:#ffffff">Payment for
+						international transport services for cargo transportation by car {trip_car}, {trip_route_en}, driver
+						{trip_driver_en}/</span> <span
+						style="font-family:'Arial Narrow'; font-size:10pt; background-color:#ffffff">Оплата за
+						міжнародні транспортні послуги з перевезення вантажу автомобілем {trip_car}, {trip_route}, водій {trip_driver}</span>
+				</p>
+			</td>
+			<td
+				style="width:84.9pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">1</span>
+				</p>
+			</td>
+			<td
+				style="width:103.5pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">{trip_price}</span>
+				</p>
+			</td>
+			<td
+				style="width:73.7pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">{trip_price}</span>
+				</p>
+			</td>
+		</tr>
+		<tr style="height:13.1pt">
+			<td
+				style="width:12.6pt; border-top:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">&#xa0;</span>
+				</p>
+			</td>
+			<td
+				style="width:157.2pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">&#xa0;</span>
+				</p>
+			</td>
+			<td
+				style="width:84.9pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'">&#xa0;</span>
+				</p>
+			</td>
+			<td
+				style="width:103.5pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">Total/Усього:</span>
+				</p>
+			</td>
+			<td
+				style="width:73.7pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">{trip_price}</span>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"
+				style="width:390.6pt; border-top:0.75pt solid #000000; padding-right:5.4pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">Total to pay/</span><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;
+					</span><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">{trip_total_words_en}</span>
+				</p>
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">Усього до сплати:</span><span
+						style="font-family:'Arial Narrow'; background-color:#ffffff">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;
+					</span><span style="font-family:'Arial Narrow'; background-color:#ffffff">{trip_total_words}</span>
+				</p>
+			</td>
+			<td
+				style="width:73.7pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+				<p style="font-size:10pt">
+					<span style="font-family:'Arial Narrow'; background-color:#ffffff">{trip_price}</span>
+				</p>
+			</td>
+		</tr>
+	</table>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">&#xa0;</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'; background-color:#ffffff">Payment </span><span
+			style="font-family:'Arial Narrow'">according</span><span
+			style="font-family:'Arial Narrow'; background-color:#ffffff"> hereto may be made not later than
+			{payment_deadline}./</span><span
+			style="font-family:'Arial Narrow'; color:#ff0000; background-color:#ffffff"> </span><span
+			style="font-family:'Arial Narrow'">Оплата за цим інвойсом може бути здійснена не пізніше
+			{payment_deadline}.</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">&#xa0;</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">Please note, that payment according hereto at the same time is the
+			evidence of the work performance and the service delivery in full scope, acceptation thereof and the
+			confirmation of final mutual installments between Parties. / Оплата згідно цього Інвойсу одночасно є
+			свідченням виконання робіт та надання послуг в повному обсязі, їх прийняття, а також підтвердженням кінцевих
+			розрахунків між Сторонами.</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">&#xa0;</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">The Parties shall not be liable for non-performance or improper
+			performance of the obligations under the agreement during the term of insuperable force circumstances. /
+			Сторони звільняються від відповідальності за невиконання чи неналежне виконання зобов’язань за договором на
+			час дії форс-мажорних обставин.</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">&#xa0;</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">&#xa0;</span>
+	</p>
+	<p style="font-size:10pt">
+		<span style="font-family:'Arial Narrow'">Supplier/Виконавець:</span><span
+			style="width:19.44pt; font-family:'Arial Narrow'; display:inline-block">&#xa0;</span><span
+			style="font-family:'Arial Narrow'">_______________________ </span><span
+			style="width:5.98pt; font-family:'Arial Narrow'; display:inline-block">&#xa0;</span><span
+			style="font-family:'Arial Narrow'">(Martsin Vasyl / Марцін В.Б.)</span>
+	</p>
+	<script defer
+		src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+		integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+		data-cf-beacon='{"rayId":"83e111d6e8ad5b69","r":1,"version":"2023.10.0","token":"4581d6a58cf94e929fad52deda295622"}'
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

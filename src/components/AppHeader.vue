@@ -25,15 +25,6 @@ function setShowValue(val: boolean) {
         id="main-button"
       >Рахунки
       </button>
-      <button
-        class="header-button"
-        :class="{
-          'active-button': router.currentRoute.value.name === 'acts',
-        }"
-        @click="() => router.push({ name: 'acts' })"
-        id="activity-button"
-      >Акти
-      </button>
     </div>
   </header>
 </template>
@@ -43,7 +34,7 @@ function setShowValue(val: boolean) {
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 0.75rem 3rem;
+  padding: 0.75rem  2rem;
   background-color: #f8f8f8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
