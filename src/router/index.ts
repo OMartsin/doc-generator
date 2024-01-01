@@ -7,11 +7,6 @@ const router = createRouter({
       path: '/',
       name: 'invoices',
       component: () => import('../views/InvoiceGenerator.vue')
-    },
-    {
-      path: '/acts',
-      name: 'acts',
-      component: () => import('../views/ActGenerator.vue')
     }
   ]
 })
