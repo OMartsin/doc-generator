@@ -76,10 +76,6 @@ const standardDescription = [
     "Вантажне перевезення", "Міжнародне вантажне перевезення"
 ]
 
-const standardCurrency = [
-    "UAH", "USD", "EUR"
-]
-
 const currencyAccounts: { [key: string]: string } = {
     "UAH": "UA593052990000026007005508116",
     "USD": "UA933052990000026005025512076",
@@ -91,20 +87,6 @@ const format = 'dd.MM.yyyy'
 watch(() => calculationDefault.value, () => {
     getCurrencyRateToShow()
     updatePriceToShow(calculationDefault.value)
-})
-
-watch(() => invoiceLanguageIsEnglish.value, () => {
-    if (invoiceLanguageIsEnglish.value && invoiceInfo.value.customer.name == 'ТзОВ "Тестовий замовник"') {
-        invoiceInfo.value.customer.name = "Test customer Ltd."
-        invoiceInfo.value.customer.address = "00000, Kyiv, Testova str., 1"
-        invoiceInfo.value.trip.route = "Kyiv (Ukraine) - Lviv (Ukraine)"
-        invoiceInfo.value.trip.driver = "Марцін Василь Богданович"
-    } else if (!invoiceLanguageIsEnglish.value && invoiceInfo.value.customer.name == "Test customer Ltd.") {
-        invoiceInfo.value.customer.name = 'ТзОВ "Тестовий замовник"'
-        invoiceInfo.value.customer.address = "00000, м. Київ, вул. Тестова, 1"
-        invoiceInfo.value.trip.route = "Київ(Україна) - Львів(Україна)"
-        invoiceInfo.value.trip.driver = "Марцін Василь Богданович"
-    }
 })
 
 watch(() => invoiceInfo.value.trip.date, () => {
@@ -188,13 +170,24 @@ const submitForm = () => {
     }
     if (invoiceLanguageIsEnglish.value) {
         generateENInvoice(invoiceInfo.value, routeEn.value)
-        return
     }
-    generateInvoice(invoiceInfo.value)
+    else{
+        generateInvoice(invoiceInfo.value)
+    }
     if(isActNeeded.value){
         generateAct(invoiceInfo.value)
     }
     invoiceInfo.value.trip.number = (Number(invoiceInfo.value.trip.number) + 1).toString()
+}
+
+function getAvailableCurrency() {
+    if (invoiceLanguageIsEnglish.value) {
+        if(invoiceInfo.value.trip.currency == "UAH"){
+            invoiceInfo.value.trip.currency = "USD"
+        }
+        return ["USD", "EUR"]
+    }
+    else return ["UAH", "USD", "EUR"]
 }
 
 </script>
@@ -216,9 +209,9 @@ const submitForm = () => {
                     <v-text-field v-model="invoiceInfo.trip.number" hide-details label="Номер" variant="outlined"
                         required />
                 </div>
-                <v-switch v-model="invoiceLanguageIsEnglish" small hide-details color="success"
+                <v-switch :disabled="isActNeeded" v-model="invoiceLanguageIsEnglish" small hide-details color="success"
                     label="Згенерувати рахунок англійською"></v-switch>
-                <v-switch v-model="isActNeeded" small hide-details color="success"
+                <v-switch :disabled="invoiceLanguageIsEnglish" v-model="isActNeeded" small hide-details color="success"
                     label="Згенерувати акт виконаних робіт"></v-switch>
             </section>
 
@@ -270,11 +263,11 @@ const submitForm = () => {
             <section class="section-financial">
                 <h3>Оплата</h3>
                 <div class="vuetify-element-container">
-                    <v-select v-model="invoiceInfo.trip.currency" label="Валюта" :items="standardCurrency"
+                    <v-select v-model="invoiceInfo.trip.currency" label="Валюта" :items="getAvailableCurrency()"
                         variant="outlined" required hide-details></v-select>
                 </div>
                 <div class="input-row-content" v-if="invoiceInfo.trip.currency != 'UAH' && !invoiceLanguageIsEnglish">
-                    <input type="checkbox" id="calculation-checkbox" v-model="calculationDefault" />
+                    <input type="checkbox" id="calculation-checkbox" v-model="calculationDefault"/>
                     <label for="calculation-checkbox" class="checkbox-label">Вирахувати суму у гривнях(курс НБУ на дату
                         складання
                         рахунку):</label>

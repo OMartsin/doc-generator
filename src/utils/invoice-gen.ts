@@ -165,7 +165,7 @@ function getTripTotalWords(price:number, currency:string): string {
 }
 
 function getTripTotalWordsEN(price:number, currency:string): string {
-    return writtenNumber(Math.trunc(price), {lang: 'en'}) + ' ' + currencyFormatForPrint(currency, price)
+    return writtenNumber(Math.trunc(price), {lang: 'en'}) + ' ' + currency
         + ' ' + (price - Math.trunc(price)).toFixed(2).slice(2) + ' ' + "cents"
 }
 
@@ -219,7 +219,7 @@ function translateDescription(description: string): string {
     if(description == 'Вантажне перевезення') {
         translatedDescription = 'Cargo transportation';
     }
-    else if(description == 'Міжнародне вантажні перевезення'){
+    else if(description == 'Міжнародне вантажне перевезення'){
         translatedDescription = 'International cargo transportation';
     }
     return translatedDescription;   
