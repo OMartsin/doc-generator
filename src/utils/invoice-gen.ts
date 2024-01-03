@@ -192,7 +192,7 @@ function currencyFormatForPrint(currency: string, price:number): string {
 function getTripType(description: string): string {
     switch(description) {
         case 'Вантажне перевезення': return '';
-        case 'Міжнародне вантажні перевезення': return 'міжнародного';
+        case 'Міжнародне вантажне перевезення': return 'міжнародного';
         default: return '';
     }
 }
@@ -200,7 +200,7 @@ function getTripType(description: string): string {
 function getTripTypeEN(description: string): string {
     switch(description) {
         case 'Вантажне перевезення': return '';
-        case 'Міжнародне вантажні перевезення': return 'international';
+        case 'Міжнародне вантажне перевезення': return 'international';
         default: return '';
     }
 }
@@ -208,7 +208,7 @@ function getTripTypeEN(description: string): string {
 function getTripTypeForAct(description: string): string {
     switch(description) {
         case 'Вантажне перевезення': return '';
-        case 'Міжнародне вантажні перевезення': return 'міжнародних';
+        case 'Міжнародне вантажне перевезення': return 'міжнародних';
         default: return '';
     }
 

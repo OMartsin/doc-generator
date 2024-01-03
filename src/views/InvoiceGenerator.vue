@@ -248,7 +248,7 @@ const submitForm = () => {
                 </div>
                 <div class="vuetify-element-container" v-if="isActNeeded">
                     <v-text-field v-model="invoiceInfo.customer.ipn" hide-details label="ІПН(необов'язковий)"
-                        variant="outlined" :required="isActNeeded" />
+                        variant="outlined" />
                 </div>
                 <section v-if="isActNeeded">
                     <h4>Рахунок замовника</h4>
