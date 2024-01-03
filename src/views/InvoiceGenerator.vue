@@ -14,7 +14,7 @@ const tempPrice = ref<number>(1200)
 const calculationDefault = ref<boolean>(false)
 const invoiceLanguageIsEnglish = ref<boolean>(false)
 const isActNeeded = ref<boolean>(false)
-const routeEn = ref<string>("Kyiv (Ukraine) - Lviv (Ukraine)")
+const routeEn = ref<string>("")
 const currencyRate = ref<number>(1)
 const priceToShow = ref<PriceInfo>({
     price: 1200,
@@ -25,15 +25,15 @@ deadlineDefault.setDate(deadlineDefault.getDate() + 7)
 const invoiceInfo = ref<InvoiceInfo>({
     customer: {
         type: 'Замовник',
-        name: 'ТзОВ "Тестовий замовник"',
-        directorName: 'Тест ТЕСТОВИЧ',
-        edrpou: '12345678',
-        ipn: '1234567890',
-        address: "00000, м. Київ, вул. Тестова, 1",
+        name: '',
+        directorName: '',
+        edrpou: '',
+        ipn: '',
+        address: "",
         account: {
-            account: "123456789",
-            bank: "АТ КБ ПРИВАТБАНК",
-            mfo: "305299"
+            account: "",
+            bank: "",
+            mfo: ""
         }
     },
     trip: {
@@ -43,7 +43,7 @@ const invoiceInfo = ref<InvoiceInfo>({
         currency: 'UAH',
         vat: 0.2,
         price: 1200,
-        route: 'Київ(Україна) - Львів(Україна)',
+        route: '',
         car: 'DAF AT6032НН/KOGEL AT3242XF',
         driver: 'Марцін Василь Богданович',
         paymentDeadline: deadlineDefault
@@ -105,6 +105,12 @@ watch(() => invoiceLanguageIsEnglish.value, () => {
         invoiceInfo.value.trip.route = "Київ(Україна) - Львів(Україна)"
         invoiceInfo.value.trip.driver = "Марцін Василь Богданович"
     }
+})
+
+watch(() => invoiceInfo.value.trip.date, () => {
+    let deadline = new Date(invoiceInfo.value.trip.date)
+    deadline.setDate(deadline.getDate() + 7)
+    invoiceInfo.value.trip.paymentDeadline = deadline
 })
 
 watch(() => invoiceInfo.value.trip.price, () => {
@@ -203,7 +209,7 @@ const submitForm = () => {
                 <h3>Загальна інформація</h3>
                 <div class="input-content">
                     <label for="year">Дата:</label>
-                    <VueDatePicker v-model="invoiceInfo.trip.date" hide-offset-dates :enable-time-picker="false"
+                    <VueDatePicker locale="uk" v-model="invoiceInfo.trip.date" hide-offset-dates :enable-time-picker="false"
                         :format="format" auto-apply required />
                 </div>
                 <div class="vuetify-element-container">
@@ -232,14 +238,13 @@ const submitForm = () => {
                         label="Ім'я та ПРІЗВИЩЕ директора"
                         variant="outlined" :required="isActNeeded" />
                 </div>
-                <div class="vuetify-element-container">
+                <div class="vuetify-element-container" v-if="!(invoiceLanguageIsEnglish&&!isActNeeded)">
                     <v-text-field v-model="invoiceInfo.customer.edrpou" hide-details label="ЄДРПОУ" variant="outlined"
-                        :required="!invoiceLanguageIsEnglish" :disabled="invoiceLanguageIsEnglish&&!isActNeeded" />
+                        :required="!invoiceLanguageIsEnglish" />
                 </div>
-                <div class="vuetify-element-container">
+                <div class="vuetify-element-container" v-if="((invoiceLanguageIsEnglish)||(isActNeeded))">
                     <v-text-field v-model="invoiceInfo.customer.address" hide-details :label="!invoiceLanguageIsEnglish ?
-                        'Адреса' : 'Адреса(латиницею)'" variant="outlined" :required="invoiceLanguageIsEnglish || isActNeeded"
-                        :disabled="((!invoiceLanguageIsEnglish)&&(!isActNeeded))" />
+                        'Адреса' : 'Адреса(латиницею)'" variant="outlined" :required="invoiceLanguageIsEnglish || isActNeeded" />
                 </div>
                 <div class="vuetify-element-container" v-if="isActNeeded">
                     <v-text-field v-model="invoiceInfo.customer.ipn" hide-details label="ІПН(необов'язковий)"
@@ -300,7 +305,7 @@ const submitForm = () => {
                     <v-text-field v-model="invoiceInfo.trip.route" hide-details label="Маршрут" variant="outlined"
                         required />
                 </div>
-                <div class="vuetify-element-container">
+                <div class="vuetify-element-container" v-if="invoiceLanguageIsEnglish">
                     <v-text-field v-model="routeEn" hide-details label="Маршрут(англійською)" variant="outlined"
                         :disabled="!invoiceLanguageIsEnglish" :required="invoiceLanguageIsEnglish" />
                 </div>
@@ -320,7 +325,7 @@ const submitForm = () => {
 
             <section class="section-payment">
                 <label for="paymentDate">Оплатити до:</label>
-                <VueDatePicker v-model="invoiceInfo.trip.paymentDeadline" hide-offset-dates :enable-time-picker="false"
+                <VueDatePicker locale="uk" v-model="invoiceInfo.trip.paymentDeadline" hide-offset-dates :enable-time-picker="false"
                     :format="format" auto-apply required />
             </section>
 
