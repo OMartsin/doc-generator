@@ -40,7 +40,7 @@
 		<span style="font-family:'Times New Roman'">&#xa0;</span>
 	</p>
 	<p style="margin-left:0.3pt; line-height:normal; font-size:12pt">
-		<span style="font-family:'Times New Roman'">від  {invoice_text_date}</span><span
+		<span style="font-family:'Times New Roman'">від {invoice_text_date}</span><span
 			style="font-family:'Times New Roman'">&#xa0; </span><span
 			style="width:10.43pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><span
 			style="width:35.4pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span><span
@@ -134,12 +134,12 @@
 	<p style="margin-left:0.3pt; line-height:normal; font-size:12pt">
 		<span style="width:14.1pt; font-family:'Times New Roman'; display:inline-block">&#xa0;</span>
 	</p>
-	<ol style="margin:0pt; font-family:'Times New Roman'; padding-left:0pt" >
-		<li
-			style="margin-left:15pt; margin-bottom:8pt; line-height:normal; padding-left:4pt; font-family:'Times New Roman'; font-size:12pt">
-			Виконавець здійснив роботи з організації і виконання перевезень вантажів:
-		</li>
-	</ol>
+	<p style="margin-left:30pt; margin-bottom:8pt; line-height:normal; padding-left:4pt; font-size:12pt; font-family:'Times New Roman';">
+		<span style="font-family:'Times New Roman'; ">
+			1. Виконавець здійснив роботи з організації і виконання перевезень вантажів:
+		</span>
+	</p>
+
 	<table style="width:496.5pt; margin-bottom:0pt; border-collapse:collapse">
 		<tr style="height:8.6pt">
 			<td
@@ -163,7 +163,8 @@
 			<td
 				style="width:58.9pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
 				<p style="text-align:center; line-height:normal; font-size:12pt">
-					<strong><span style="font-family:'Times New Roman'; ">Ціна за 1 рейс без ПДВ, {currency} </span></strong>
+					<strong><span style="font-family:'Times New Roman'; ">Ціна за 1 рейс без ПДВ, {currency}
+						</span></strong>
 				</p>
 			</td>
 			<td colspan="2"
@@ -183,7 +184,7 @@
 			<td
 				style="width:235.1pt; border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
 				<p style="margin-bottom:0pt; line-height:normal">
-					<span style="font-family:'Times New Roman'">Послуги по транспортних перевезеннях вантажу автомобілем
+					<span style="font-family:'Times New Roman'">Послуги по {trip_type_act} транспортних перевезеннях вантажу автомобілем
 						{trip_car}, </span>
 				</p>
 				<p style="margin-bottom:0pt; line-height:normal">
@@ -276,10 +277,7 @@
 	<p style="margin-left:0.3pt; margin-bottom:0pt; line-height:normal; font-size:12pt">
 		<span style="font-family:'Times New Roman'">2.Загальна вартість виконаних робіт становить без ПДВ
 		</span><strong><span style="font-family:'Times New Roman'; ">{trip_total_without_VAT_words}</span></strong>
-	</p>
-	<p style="margin-left:0.3pt; margin-bottom:0pt; line-height:normal; font-size:12pt">
-		<span
-			style="font-family:'Times New Roman'"> ПДВ </span><strong><span
+		<span style="font-family:'Times New Roman'"> ПДВ </span><strong><span
 				style="font-family:'Times New Roman'; ">{trip_VAT_words}</span></strong><span
 			style="font-family:'Times New Roman'">, загальна вартість робіт із ПДВ </span><strong><span
 				style="font-family:'Times New Roman'; ">{trip_total_words}</span></strong>
@@ -357,7 +355,9 @@
 			<td
 				style="width:241.85pt; border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
 				<p style="margin-bottom:0pt; line-height:normal; font-size:12pt">
-					<strong><span style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">{customer_name} </span></strong><br /><span
+					<strong><span
+							style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">{customer_name}
+						</span></strong><br /><span
 						style="font-family:'Times New Roman'; background-color:#ffffff">{customer_address}</span>
 				</p>
 				<p style="margin-bottom:0pt; line-height:normal; font-size:12pt">
@@ -379,7 +379,8 @@
 					<strong><span style="font-family:'Times New Roman'; color:#222222">&#xa0;</span></strong>
 				</p>
 				<p style="margin-bottom:0pt; line-height:normal; font-size:12pt">
-					<strong><span style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">{customer_company_type}
+					<strong><span
+							style="font-family:'Times New Roman'; color:#222222; background-color:#ffffff">{customer_company_type}
 							____________ {director_first_second_name}</span></strong>
 				</p>
 			</td>

@@ -56,6 +56,7 @@ function replaceInvoicePlaceholders(html: string, invoiceInfo: InvoiceInfo): str
     return html
         .replace(/{invoice_number}/g, tripInfo.number + '/' + tripInfo.date.getFullYear())
         .replace(/{invoice_date}/g, tripInfo.date.toLocaleDateString())
+        .replace(/{trip_type}/g, getTripType(tripInfo.description))
         .replace(/{customer_name}/g, customerInfo.name)
         .replace(/{customer_edrpou}/g, customerInfo.edrpou)
         .replace(/{customer_type}/g, customerInfo.type)
@@ -94,6 +95,7 @@ function replaceActPlaceholders(html: string, invoiceInfo: InvoiceInfo): string 
     const customer_account = invoiceInfo.customer.account;
     let result = html
     .replace(/{invoice_text_date}/g, getDateInFormatString(tripInfo.date))
+    .replace(/{trip_type_act}/g, getTripTypeForAct(tripInfo.description))
     .replace(/{trip_total_without_VAT_words}/g, getTripTotalWords(priceInfo.priceWithoutVat, tripInfo.currency))
     .replace(/{trip_VAT_words}/g, getTripTotalWords(priceInfo.vatSum, tripInfo.currency))
     .replace(/{customer_address}/g, invoiceInfo.customer.address)
@@ -156,7 +158,7 @@ function getMonthName(month: number): string {
 
 function getTripTotalWords(price:number, currency:string): string {
     return writtenNumber(Math.trunc(price), {lang: 'uk'}) + ' ' + currencyFormatForPrint(currency, price)
-        + ' ' + (price - Math.trunc(price)).toFixed(2).slice(2) + ' ' + "коп"
+        + ' ' + (price - Math.trunc(price)).toFixed(2).slice(2) + ' ' + "коп."
 }
 
 function getTripTotalWordsEN(price:number, currency:string): string {
@@ -184,6 +186,30 @@ function currencyFormatForPrint(currency: string, price:number): string {
     }
 }
 
+function getTripType(description: string): string {
+    switch(description) {
+        case 'Вантажне перевезення': return '';
+        case 'Міжнародне вантажні перевезення': return 'міжнародного';
+        default: return '';
+    }
+}
+
+function getTripTypeEN(description: string): string {
+    switch(description) {
+        case 'Вантажне перевезення': return '';
+        case 'Міжнародне вантажні перевезення': return 'international';
+        default: return '';
+    }
+}
+
+function getTripTypeForAct(description: string): string {
+    switch(description) {
+        case 'Вантажне перевезення': return '';
+        case 'Міжнародне вантажні перевезення': return 'міжнародних';
+        default: return '';
+    }
+
+}
 
 function translateDescription(description: string): string {
     let translatedDescription = description;
