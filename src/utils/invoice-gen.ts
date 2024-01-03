@@ -6,8 +6,6 @@ import htmlToDocx from 'html-docx-js/dist/html-docx';
 import writtenNumber from 'written-number';
 import type { InvoiceInfo } from '../types/types';
 
-
-
 export function generateInvoice(invoiceInfo: InvoiceInfo) {
     const html = replaceInvoicePlaceholders(htmlContent, invoiceInfo);
     const converted = htmlToDocx.asBlob(html);
@@ -86,6 +84,7 @@ function replacePlaceholdersEN(html: string, invoiceInfo: InvoiceInfo, routeEn:s
         .replace(/{trip_car_en}/g, tripInfo.car)
         .replace(/{trip_driver_en}/g, transliterateCyrillicToLatin(tripInfo.driver))
         .replace(/{travel_description_en} /g, translatedDescription)
+        .replace(/{trip_type_en}/g, getTripTypeEN(tripInfo.description))
         .replace(/{customer_address}/g, transliterateCyrillicToLatin(invoiceInfo.customer.address))
 }
 
@@ -135,7 +134,11 @@ function getCompanyType(name: string): string {
 }
 
 function getDateInFormatString(date: Date): string {
-    return '«' + date.getDate() + '» ' + getMonthName(date.getMonth()) + ' ' + date.getFullYear() + ' р.'
+    return '«' + formatDayForAct(date) + '» ' + getMonthName(date.getMonth()) + ' ' + date.getFullYear() + ' р.'
+}
+
+function formatDayForAct(date: Date): string {
+    return date.getDate() < 10 ? '0' + date.getDate() : date.getDate().toString();
 }
 
 function getMonthName(month: number): string {
